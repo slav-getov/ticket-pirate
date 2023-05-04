@@ -1,0 +1,1 @@
+the goal of this program will be to create an MVP for a ticket sharing service for mobile users.
