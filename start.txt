@@ -1,1 +1,7 @@
 the goal of this program will be to create an MVP for a ticket sharing service for mobile users.
+
+1.
+Have a greeting screen and below it three options:
+                Get Ticket
+                Submit Ticket
+                Read Instructions

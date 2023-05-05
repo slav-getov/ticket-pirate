@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -16,7 +17,9 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import TestPage from './components/Testing/TestPage';
 import {
   Colors,
   DebugInstructions,
@@ -28,12 +31,19 @@ import {
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
-
+const Stack = createNativeStackNavigator();
 function App(): JSX.Element {
   return (
-    <View style={styles.headerView}>
-      <Text style={styles.headerTextStyle}>Welcome to Ticket Pirate</Text>
-    </View>
+    <>
+      <NavigationContainer>
+        <View style={styles.headerView}>
+          <Text style={styles.headerTextStyle}>Welcome to Ticket Pirates</Text>
+        </View>
+        <Stack.Navigator>
+          <Stack.Screen name="Test" component={TestPage} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 }
 
