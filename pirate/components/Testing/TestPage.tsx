@@ -1,11 +1,17 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 const TestPage = () => {
   return (
-    <View>
+    <View style={styles.pageContainer}>
       <Text>Testing navigation</Text>
     </View>
   );
 };
-
+const styles = StyleSheet.create({
+  pageContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 export default TestPage;

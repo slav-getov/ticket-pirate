@@ -20,6 +20,7 @@ import {
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TestPage from './components/Testing/TestPage';
+import ActionScreen from './components/ActionScreen/ActionScreen';
 import {
   Colors,
   DebugInstructions,
@@ -39,8 +40,9 @@ function App(): JSX.Element {
         <View style={styles.headerView}>
           <Text style={styles.headerTextStyle}>Welcome to Ticket Pirates</Text>
         </View>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName="Actions">
           <Stack.Screen name="Test" component={TestPage} />
+          <Stack.Screen name="Actions" component={ActionScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
